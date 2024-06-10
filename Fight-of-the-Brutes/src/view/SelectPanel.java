@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Image;
 import java.awt.LayoutManager;
 
 import javax.swing.ImageIcon;
@@ -8,11 +9,18 @@ import javax.swing.JPanel;
 
 public class SelectPanel extends JPanel {
 	
-	ImageIcon cenarioIcon = new ImageIcon(getClass().getResource("/img/cenario.png"));
+	
+	
 	public static JLabel cenario = new JLabel();
 	
 	public SelectPanel() {
 		super();
+		
+		ImageIcon cenarioIcon = new ImageIcon(getClass().getResource("/cenario/cenarioKof99.jpg"));
+		Image image = cenarioIcon.getImage(); // transform it 
+		Image newimg = image.getScaledInstance(1200, 720,  java.awt.Image.SCALE_FAST);
+		cenarioIcon = new ImageIcon(newimg);
+		
 		this.setVisible(true);
 		this.setSize(1200,720);
 		this.setLayout(null);

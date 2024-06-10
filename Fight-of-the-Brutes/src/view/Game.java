@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Color;
+import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -16,11 +17,8 @@ public class Game extends JPanel{
 	
 	int alturaChao = 720-334;
 	
-	public Personagem player1 = new Personagem(40, alturaChao);
-	public Personagem player2 = new Personagem(1000, alturaChao);
-	
-	public ImageIcon walk = new ImageIcon(getClass().getResource("/img/Idle (1).png"));
-	public ImageIcon ninja = new ImageIcon(getClass().getResource("/img/NinjaIdle (1).png"));
+	public Personagem player1 = new Personagem(40, 500);
+	public Personagem player2 = new Personagem(1000, 500);
 	
 	public  JLabel personagem1 = new JLabel();
 	public  JLabel personagem2 = new JLabel();
@@ -28,25 +26,29 @@ public class Game extends JPanel{
 	public JLabel puch1 = new JLabel();
 	public JLabel puch2 = new JLabel();
 	
-	ImageIcon cenarioIcon = new ImageIcon(getClass().getResource("/img/cenarioSaopaulo.png"));
+	//ImageIcon cenarioIcon = new ImageIcon(getClass().getResource("/cenario/cenarioSaopaulo.png"));
 	public static JLabel cenario = new JLabel();
 	
 	public JProgressBar barraVida1 = new JProgressBar();
 	public JProgressBar barraVida2 = new JProgressBar();
 	
 	public Game() {
-		
 		this.setVisible(true);
 		this.setSize(1200,720);
 		this.setLayout(null);
 		
-		personagem1.setIcon(walk);
+		ImageIcon cenarioIcon = new ImageIcon(getClass().getResource("/cenario/kofXV.gif"));
+		Image image = cenarioIcon.getImage(); // transform it 
+		Image newimg = image.getScaledInstance(1200, 720,  java.awt.Image.SCALE_FAST);
+		cenarioIcon = new ImageIcon(newimg);
+		
+		//personagem1.setIcon(walk);
 		personagem1.setBounds(player1.getX(), player1.getY(), player1.getLargura(), player1.getAltura());
 		this.add(personagem1);
 		puch1.setBounds(player1.getX(), player1.getY(), player1.puchLargura, player1.puchAltura);
 		//this.add(puch1);
 		
-		personagem2.setIcon(ninja);
+		//personagem2.setIcon(ninja);
 		personagem2.setBounds(player2.getX(), player2.getY(), player2.getLargura(), player2.getAltura());
 		this.add(personagem2);
 		puch2.setBounds(player1.getX(), player1.getY(), player2.puchLargura, player2.puchAltura);
@@ -66,6 +68,5 @@ public class Game extends JPanel{
 		cenario.setIcon(cenarioIcon);
 		cenario.setBounds(0, 0, 1200, 720);
 		this.add(cenario);
-		
 	}
 }
