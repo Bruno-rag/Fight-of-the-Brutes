@@ -5,7 +5,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class OverPanel extends JPanel{
-	ImageIcon cenarioIcon = new ImageIcon(getClass().getResource("/cenario/cenario.png"));
+	ImageIcon cenarioIcon = new ImageIcon(getClass().getResource("/cenario/cenarioKof99.jpg"));
 	public static JLabel cenario = new JLabel();
 	
 	public OverPanel() {

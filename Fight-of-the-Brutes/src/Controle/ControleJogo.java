@@ -1,17 +1,9 @@
 package Controle;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
-import modelo.Personagem;
 import view.Frame;
 import view.Game;
 import view.OverPanel;
@@ -60,7 +52,7 @@ public class ControleJogo implements KeyListener{
 				atualizaPlay1();
 				
 				try {
-					Thread.sleep(100);
+					Thread.sleep(120);
 				} catch (Exception e) {
 					
 				}
@@ -191,7 +183,7 @@ public class ControleJogo implements KeyListener{
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		
+		System.out.println("teste");
 		if(jogando == false) {
 			
 			this.frame.setContentPane(this.game);

@@ -16,7 +16,7 @@ public class Frame extends JFrame{
 	
 	
 	public Frame() {
-		super("Uesb Fight");
+		super("Fight");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setSize(larguraTela, alturaTela);
 		this.setLocationRelativeTo(null);
