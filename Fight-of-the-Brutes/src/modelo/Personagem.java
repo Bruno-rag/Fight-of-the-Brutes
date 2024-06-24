@@ -3,7 +3,7 @@ package modelo;
 public class Personagem {
 
 	public int altura = 350;
-	static int largura = 180;
+	static int largura = 200;
 	public int alturaAbst = 350;
 	public int larguraAbst = 100;
 	public int x;
@@ -18,10 +18,12 @@ public class Personagem {
 	public int puchAltura = 150;
 	public int deslocaento = 12;
 	public boolean puch = false;
-	public int tempoDePuch = 10;
+	//public int tempoDePuch = 10;
 	public int vidaTotal = 100;
 	public int vidaAtual = 100;
 	public String estadoPer = "parado";
+	public boolean jogadorMorto = false;
+
 	
 	public Personagem(int x, int y) {
 		super();

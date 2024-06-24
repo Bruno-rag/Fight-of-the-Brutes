@@ -16,7 +16,7 @@ public class SelectPanel extends JPanel {
 	public SelectPanel() {
 		super();
 		
-		ImageIcon cenarioIcon = new ImageIcon(getClass().getResource("/cenario/cenarioKof99.jpg"));
+		ImageIcon cenarioIcon = new ImageIcon(getClass().getResource("/cenario/Luta dos Brutos.gif"));
 		Image image = cenarioIcon.getImage(); // transform it 
 		Image newimg = image.getScaledInstance(1200, 720,  java.awt.Image.SCALE_FAST);
 		cenarioIcon = new ImageIcon(newimg);
